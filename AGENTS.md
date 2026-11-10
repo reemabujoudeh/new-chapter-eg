@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- All user-facing text lives in `src/i18n/ar.json` and `src/i18n/en.json` (same keys), read through `useLanguage()` from `src/i18n/LanguageProvider.tsx`; the provider owns `<html lang/dir>` and persists the choice in localStorage, so components never set document direction themselves.
+- The hero artwork is bilingual by design and forced `dir="ltr"` for layout; it reads fixed strings from `dictionaries.en` / `dictionaries.ar` while only UI labels follow the active language.
