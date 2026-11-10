@@ -117,7 +117,7 @@ export function Hero({ nextSectionId }: { nextSectionId: string }) {
       </div>
 
       {/* Student, in front of the headline */}
-      <div className="relative z-20 -mt-[7vw] flex justify-center md:absolute md:inset-x-0 md:bottom-[3%] md:mt-0 md:h-[59%]">
+      <div className="relative z-20 -mt-[7vw] flex justify-center md:absolute md:inset-x-0 md:bottom-[2%] md:mt-0 md:h-[62%]">
         <img
           src={studentImg}
           alt={t.hero.studentAlt}
