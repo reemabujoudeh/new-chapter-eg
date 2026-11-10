@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "title": "A New Chapter in Egyptian Education — Interactive Documentary",
+    "description": "A cinematic scrollytelling documentary about the future of education in Egypt, told chapter by chapter."
+  },
+  "nav": {
+    "home": "Home",
+    "language": "Language",
+    "arabic": "العربية",
+    "english": "English"
+  },
+  "hero": {
+    "title": ["A NEW", "CHAPTER"],
+    "tagline": ["IN", "EGYPTIAN", "EDUCATION"],
+    "taglineAria": "In Egyptian Education",
+    "badge": "REEM",
+    "badgeYear": "26'",
+    "studentAlt": "Smiling Egyptian student wearing glasses and a backpack",
+    "explore": "Explore the story",
+    "exploreAria": "Scroll to Chapter 1"
+  },
+  "chapter1": {
+    "eyebrow": "Chapter 01",
+    "title": "The Beginning",
+    "body": "The story of a new generation rewriting what learning means in Egypt."
+  }
+}
