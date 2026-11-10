@@ -96,8 +96,8 @@ export function Hero({ nextSectionId }: { nextSectionId: string }) {
           className="relative whitespace-nowrap text-center headline-display text-foreground text-[min(15.4vw,6.8rem)] md:text-[min(12.6vw,22vh)]"
         >
           <span className="sr-only">{EN.title.join(" ")}</span>
-          <AnimatedWord text={EN.title[0]} startDelay={150} />
-          <AnimatedWord text={EN.title[1]} startDelay={150 + EN.title[0].length * 70} />
+          <AnimatedWord text={EN.title[0] ?? ""} startDelay={150} />
+          <AnimatedWord text={EN.title[1] ?? ""} startDelay={150 + (EN.title[0]?.length ?? 0) * 70} />
 
           {/* REEM 26' sticker, top-right of the headline */}
           <span
