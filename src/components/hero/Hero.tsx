@@ -70,7 +70,7 @@ export function Hero({ nextSectionId }: { nextSectionId: string }) {
           aria-hidden
           fetchPriority="high"
           decoding="async"
-          className="h-full w-full animate-ken-burns object-cover object-[62%_30%] opacity-90"
+          className="h-full w-full animate-ken-burns object-cover object-[62%_30%] opacity-80"
         />
       </div>
       <div aria-hidden className="absolute inset-0 -z-20 violet-glow animate-glow-pulse" />
@@ -89,11 +89,11 @@ export function Hero({ nextSectionId }: { nextSectionId: string }) {
       </header>
 
       {/* Headline (behind the student) */}
-      <div className="relative z-10 mt-14 flex justify-center md:absolute md:inset-x-0 md:top-[15%] md:mt-0">
+      <div className="relative z-10 mt-14 flex justify-center md:absolute md:inset-x-0 md:top-[12%] md:mt-0">
         <h1
           id="hero-title"
           lang="en"
-          className="relative whitespace-nowrap text-center headline-display text-foreground text-[min(15.4vw,6.8rem)] md:text-[min(12.6vw,22vh)]"
+          className="relative whitespace-nowrap text-center headline-display text-foreground text-[min(14.6vw,6.8rem)] md:text-[min(12.4vw,20.5vh)]"
         >
           <span className="sr-only">{EN.title.join(" ")}</span>
           <AnimatedWord text={EN.title[0] ?? ""} startDelay={150} />
@@ -103,7 +103,7 @@ export function Hero({ nextSectionId }: { nextSectionId: string }) {
           <span
             role="img"
             aria-label={`${EN.badge} ${EN.badgeYear}`}
-            className="absolute right-[-0.02em] top-[0.08em] block animate-sticker-pop text-[0.2em] md:right-[0.05em] md:top-[0.12em]"
+            className="absolute right-0 top-[-0.36em] block animate-sticker-pop text-[0.2em] md:right-[0.02em] md:top-[0.1em]"
             style={{ animationDelay: "1300ms" }}
           >
             <span className="absolute -right-[0.1em] -top-[0.95em] font-marker text-[0.7em] italic leading-none text-neon">
@@ -117,7 +117,7 @@ export function Hero({ nextSectionId }: { nextSectionId: string }) {
       </div>
 
       {/* Student, in front of the headline */}
-      <div className="relative z-20 -mt-[17vw] flex justify-center md:absolute md:inset-x-0 md:bottom-0 md:mt-0 md:h-[72%]">
+      <div className="relative z-20 -mt-[7vw] flex justify-center md:absolute md:inset-x-0 md:bottom-[3%] md:mt-0 md:h-[59%]">
         <img
           src={studentImg}
           alt={t.hero.studentAlt}
@@ -164,7 +164,7 @@ export function Hero({ nextSectionId }: { nextSectionId: string }) {
               } ${
                 i < 2
                   ? "text-[min(11vw,3rem)] md:text-[min(5.4vw,9.5vh)]"
-                  : "mt-1 text-[min(4.6vw,1.25rem)] md:mt-2 md:text-[min(2.5vw,4.4vh)]"
+                  : "mt-1 whitespace-nowrap text-[min(3.9vw,1.25rem)] md:mt-2 md:text-[min(2.5vw,4.4vh)]"
               }`}
               style={{ animationDelay: `${1100 + i * 140}ms` }}
             >
