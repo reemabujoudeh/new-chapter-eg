@@ -5,9 +5,18 @@
   },
   "nav": {
     "home": "Home",
+    "backToTop": "Back to the beginning",
     "language": "Language",
     "arabic": "العربية",
-    "english": "English"
+    "english": "English",
+    "progress": "Chapter progress",
+    "goTo": "Go to chapter",
+    "credits": "Credits"
+  },
+  "common": {
+    "chapter": "Chapter",
+    "toBeAdded": "[TO BE ADDED]",
+    "placeholder": "Placeholder"
   },
   "hero": {
     "title": ["A NEW", "CHAPTER"],
@@ -19,9 +28,153 @@
     "explore": "Explore the story",
     "exploreAria": "Scroll to Chapter 1"
   },
-  "chapter1": {
-    "eyebrow": "Chapter 01",
-    "title": "The Beginning",
-    "body": "The story of a new generation rewriting what learning means in Egypt."
+  "past": {
+    "title": "THE PAST",
+    "subtitle": "What was the journey like?",
+    "intro": "Before talking about change, we go back to where it began: the traditional Thanaweya Amma system.",
+    "timelineLabel": "Historical timeline of Thanaweya Amma",
+    "milestone": "Milestone",
+    "hint": "Official facts only — no unverified statistics",
+    "scrollHint": "Swipe the timeline"
+  },
+  "problem": {
+    "title": "THE PROBLEM",
+    "subtitle": "Why did we need change?",
+    "intro": "Behind every exam season is a story that repeats itself in many homes.",
+    "sceneAlt": "A student's desk at night covered with textbooks and exam papers under a desk lamp",
+    "phrases": [
+      "Pressure tied to life-defining exams",
+      "A heavy focus on the final total score",
+      "Relying on a single exam result",
+      "The need to develop thinking and understanding skills"
+    ]
+  },
+  "turning": {
+    "title": "THE TURNING POINT",
+    "subtitle": "The rise of the Egyptian Baccalaureate",
+    "intro": "Law No. 169 of 2025 introduced the Egyptian Baccalaureate as an alternative track to Thanaweya Amma.",
+    "facts": [
+      { "value": "169", "label": "Law No. 169 of 2025", "text": "Introduced the Egyptian Baccalaureate as an alternative track to Thanaweya Amma." },
+      { "value": "2025–26", "label": "Starting year", "text": "The system starts in the 2025–2026 academic year." },
+      { "value": "Optional", "label": "First-year secondary", "text": "Optional for first-year secondary students, alongside the traditional system." }
+    ],
+    "goals": "Stated goals",
+    "philosophy": "Educational philosophy",
+    "hint": "From official sources"
+  },
+  "how": {
+    "title": "HOW IT WORKS",
+    "subtitle": "The student journey, from Grade 1 to Grade 3 secondary",
+    "intro": "The Egyptian Baccalaureate, step by step.",
+    "structure": {
+      "title": "Academic Structure",
+      "grade1Title": "Grade 1 secondary",
+      "grade1Text": "An introductory stage.",
+      "grade1Hint": "Stage details",
+      "grade23Title": "Grades 2 & 3 secondary",
+      "grade23Text": "The graded years."
+    },
+    "subjects": {
+      "title": "Study Subjects",
+      "coreTitle": "Grade 2 · Core subjects for all tracks",
+      "coreTag": "Counted in the total",
+      "core": ["Arabic", "First Foreign Language", "History"],
+      "tracksTitle": "Grade 2 · Four tracks",
+      "tracksText": "Each track has ONE specialization subject, chosen in Grade 2.",
+      "or": "or",
+      "notCountedTitle": "Not counted in the total",
+      "notCounted": ["Financial Literacy", "Physical Education (practical only)"],
+      "grade3Title": "Grade 3 · Two advanced specialization subjects per track",
+      "tracks": [
+        { "name": "Medicine & Life Sciences", "grade2": ["Physics", "Mathematics"], "grade3": ["Biology", "Chemistry"] },
+        { "name": "Engineering & Computer Science", "grade2": ["Chemistry", "Programming & AI"], "grade3": ["Mathematics", "Physics"] },
+        { "name": "Business", "grade2": ["Accounting", "Business Administration"], "grade3": ["Economics", "Mathematics"] },
+        { "name": "Arts & Humanities", "grade2": ["Psychology", "Second Foreign Language"], "grade3": ["Geography", "Statistics"] }
+      ],
+      "religionTitle": "Religious Education",
+      "religionText": "Not counted in the total, but requires at least 70% to pass."
+    },
+    "assessment": {
+      "title": "Assessment System",
+      "items": [
+        { "value": "100", "label": "Per subject", "text": "Each subject is graded out of 100." },
+        { "value": "600", "label": "Final total", "text": "The final total is out of 600." },
+        { "value": "MAX", "label": "Best attempt counts", "text": "The highest score in each subject across all attempts counts." },
+        { "value": "50/50", "label": "From 2026/2027", "text": "Exams are 50% multiple choice and 50% essay questions." },
+        { "value": "60%", "label": "To sit the exam", "text": "To sit the first-chance exam, a student must complete 60% of weekly and monthly assessments for each subject." }
+      ]
+    },
+    "exams": {
+      "title": "Examination Opportunities",
+      "grades": [
+        {
+          "name": "Grade 2",
+          "attempts": [
+            { "label": "First attempt", "month": "May", "detail": "Mandatory · Free" },
+            { "label": "Second attempt", "month": "July", "detail": "Optional · 200 EGP per subject" }
+          ]
+        },
+        {
+          "name": "Grade 3",
+          "attempts": [
+            { "label": "First attempt", "month": "June", "detail": "Mandatory · Free" },
+            { "label": "Second attempt", "month": "August", "detail": "Optional · 200 EGP per subject" }
+          ]
+        }
+      ],
+      "years": "Students may attempt exams across four academic years.",
+      "trackChange": "Grade 3 students may change track if they study the specialization subject of the new track."
+    },
+    "note": "Information based on Ministry of Education decisions as of November 2026. Details may be updated."
+  },
+  "compare": {
+    "title": "OLD VS NEW",
+    "subtitle": "Between two systems: a comparison",
+    "intro": "Two systems side by side, described as they are.",
+    "old": "Thanaweya Amma",
+    "new": "Egyptian Baccalaureate",
+    "aspect": "Aspect",
+    "rows": ["Academic structure", "Tracks", "Exams", "Improvement opportunities", "Assessment"],
+    "hint": "From official decisions"
+  },
+  "voices": {
+    "title": "VOICES",
+    "subtitle": "Three imagined scenes from the journey",
+    "intro": "What might the people living this change be thinking?",
+    "cards": [
+      { "role": "Student", "quote": "I don't just want to pass. I want to understand why I'm learning, and what I can do with what I learn.", "alt": "Illustrative scene of a secondary school student in a dim classroom" },
+      { "role": "Parent", "quote": "Every parent wants to see their children have real chances to choose their future.", "alt": "Illustrative scene of a mother at a kitchen table with a cup of tea" },
+      { "role": "Teacher", "quote": "Education isn't just grades and exams. Real education is when a student knows how to think, analyze and create.", "alt": "Illustrative scene of a teacher standing in front of a chalkboard" }
+    ],
+    "disclaimer": "These characters and dialogues are illustrative fictional scenarios, not real testimonies or quotes."
+  },
+  "future": {
+    "title": "THE FUTURE",
+    "subtitle": "Where are we heading?",
+    "intro": "Open questions, no ready-made answers.",
+    "questions": [
+      "Can the secondary education experience change?",
+      "How can multiple tracks affect students' choices?",
+      "Why do thinking skills matter?",
+      "What challenges may the system face?",
+      "What does it need to achieve its goals?"
+    ],
+    "closing": "THE FUTURE OF EDUCATION IS NOT JUST ABOUT WHAT WE LEARN, BUT HOW WE LEARN."
+  },
+  "credits": {
+    "title": "CREDITS",
+    "subtitle": "End of the journey",
+    "film": "A NEW CHAPTER IN EGYPTIAN EDUCATION",
+    "items": [
+      { "role": "Research & Content", "lines": ["{TBA}"] },
+      { "role": "Design & Development", "lines": ["{TBA}"] },
+      { "role": "Official References", "lines": ["{TBA}"] },
+      { "role": "Project Creator", "lines": ["Reem Abu Jouda"] },
+      { "role": "Presented for", "lines": ["Little Innovator Competition"] },
+      { "role": "Image Sources", "lines": ["Chapter 02 and 06 scenes: AI-generated illustrations", "Hero images: {TBA}"] }
+    ],
+    "updated": "Information updated as of November 2026",
+    "pause": "Pause credits",
+    "play": "Play credits"
   }
 }
