@@ -8,7 +8,7 @@ export function Placeholder({ hint, className }: { hint?: string; className?: st
   const { t } = useLanguage();
   return (
     <div className={cn("placeholder-block px-4 py-3", className)}>
-      <span className="font-label text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-neon">
+      <span className="font-label text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-neon">
         {t.common.placeholder}
       </span>
       <p className="mt-1.5 font-semibold text-foreground/85">{t.common.toBeAdded}</p>

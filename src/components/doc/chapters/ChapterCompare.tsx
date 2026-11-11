@@ -10,7 +10,9 @@ export function ChapterCompare() {
   const c = t.compare;
   const ar = lang === "ar";
   const grid = "grid grid-cols-2 md:grid-cols-[minmax(11rem,1fr)_2fr_2fr]";
-  const colHead = ar ? "arabic-display text-xl md:text-3xl" : "headline-display text-sm md:text-xl";
+  const colHead = ar
+    ? "arabic-display text-xl md:text-3xl"
+    : "font-label text-[0.8rem] font-bold uppercase leading-snug tracking-wider md:headline-display md:text-xl";
 
   return (
     <Chapter number={5}>

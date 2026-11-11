@@ -59,7 +59,7 @@ export function Credits() {
         </Reveal>
       </h2>
 
-      <div className="group relative mt-12 h-[62svh] w-full max-w-2xl overflow-hidden edge-fade-y motion-reduce:overflow-y-auto">
+      <div className="group relative mt-12 h-[56svh] w-full max-w-2xl overflow-hidden edge-fade-y motion-reduce:overflow-y-auto">
         <div
           className={cn(
             "animate-credits-roll group-hover:[animation-play-state:paused] group-focus-within:[animation-play-state:paused] motion-reduce:animate-none",
