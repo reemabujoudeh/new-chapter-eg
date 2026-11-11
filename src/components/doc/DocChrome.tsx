@@ -1,3 +1,4 @@
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { LanguageToggle } from "@/components/hero/LanguageToggle";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { cn } from "@/lib/utils";
@@ -8,6 +9,7 @@ import { prefersReducedMotion, scrollToId, useActiveSection } from "./motion";
 export function DocChrome() {
   const active = useActiveSection(SECTION_IDS);
   const shown = active >= 0;
+  useKeepPlaceOnLanguageChange();
   return (
     <>
       <TopBar shown={shown} />
@@ -93,4 +95,36 @@ function ChapterIndicator({ active, shown }: { active: number; shown: boolean })
       </ol>
     </nav>
   );
+}
+
+/** Switching language reflows every chapter; keep the reader on the section they were reading. */
+function useKeepPlaceOnLanguageChange() {
+  const { lang } = useLanguage();
+  const anchor = useRef<{ id: string; top: number } | null>(null);
+  const mounted = useRef(false);
+
+  useEffect(() => {
+    const save = () => {
+      let next: { id: string; top: number } | null = null;
+      for (const id of SECTION_IDS) {
+        const top = document.getElementById(id)?.getBoundingClientRect().top;
+        if (top !== undefined && top <= window.innerHeight * 0.45) next = { id, top };
+      }
+      anchor.current = next;
+    };
+    save();
+    window.addEventListener("scroll", save, { passive: true });
+    return () => window.removeEventListener("scroll", save);
+  }, []);
+
+  useLayoutEffect(() => {
+    if (!mounted.current) {
+      mounted.current = true;
+      return;
+    }
+    const a = anchor.current;
+    const el = a && document.getElementById(a.id);
+    if (!a || !el) return;
+    window.scrollBy({ top: el.getBoundingClientRect().top - a.top, behavior: "instant" });
+  }, [lang]);
 }
