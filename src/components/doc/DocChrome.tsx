@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { LanguageToggle } from "@/components/hero/LanguageToggle";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { cn } from "@/lib/utils";
@@ -117,14 +117,18 @@ function useKeepPlaceOnLanguageChange() {
     return () => window.removeEventListener("scroll", save);
   }, []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!mounted.current) {
       mounted.current = true;
       return;
     }
     const a = anchor.current;
-    const el = a && document.getElementById(a.id);
-    if (!a || !el) return;
-    window.scrollBy({ top: el.getBoundingClientRect().top - a.top, behavior: "instant" });
+    if (!a) return;
+    // Wait a frame: the provider updates <html lang/dir> (and so the body font) in its own effect.
+    const frame = requestAnimationFrame(() => {
+      const el = document.getElementById(a.id);
+      if (el) window.scrollBy({ top: el.getBoundingClientRect().top - a.top, behavior: "instant" });
+    });
+    return () => cancelAnimationFrame(frame);
   }, [lang]);
 }
