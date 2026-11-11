@@ -33,3 +33,7 @@ use the editor.
 
 - All user-facing text lives in `src/i18n/ar.json` and `src/i18n/en.json` (same keys), read through `useLanguage()` from `src/i18n/LanguageProvider.tsx`; the provider owns `<html lang/dir>` and persists the choice in localStorage, so components never set document direction themselves.
 - The hero artwork is bilingual by design and forced `dir="ltr"` for layout; it reads fixed strings from `dictionaries.en` / `dictionaries.ar` while only UI labels follow the active language.
+- Story chapters live in `src/components/doc/` (one component per chapter in `chapters/`, order and ids in `chapters.ts`); shared pieces (`Chapter`/`ChapterHeader`, `Reveal`, `Placeholder`, `DocChrome`) keep every chapter on the same layout, motion and tokens.
+- Chapter titles show English and Arabic together (active language first) by reading `dictionaries.en` / `dictionaries.ar` directly; all other chapter copy follows the active language.
+- Unfinished copy is marked with the `{TBA}` token or `<Placeholder>` so missing facts stay visibly marked instead of being invented.
+- Scroll effects go through `useScrollProgress` (writes CSS variables, no per-frame re-renders) and must have a static fallback under prefers-reduced-motion.
