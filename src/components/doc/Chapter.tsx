@@ -2,7 +2,7 @@ import { useRef, type ReactNode, type Ref } from "react";
 import { dictionaries, useLanguage } from "@/i18n/LanguageProvider";
 import { cn } from "@/lib/utils";
 import { chapterDigits, pad2, type ChapterKey } from "./chapters";
-import { useScrollProgress, prefersReducedMotion } from "./motion";
+import { useReducedMotion, useScrollProgress } from "./motion";
 import { Reveal } from "./Reveal";
 
 type ChapterProps = {
@@ -38,17 +38,16 @@ export function ChapterHeader({ number, chapterKey, className }: { number: numbe
   const { lang, t } = useLanguage();
   const numberRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLElement>(null);
-  const reduce = useRef(false);
+  const reduced = useReducedMotion();
 
   useScrollProgress(
     headerRef,
     (p) => {
-      if (reduce.current || !numberRef.current) return;
-      numberRef.current.style.transform = `translate3d(0, ${(p - 0.5) * -90}px, 0)`;
+      if (!numberRef.current) return;
+      numberRef.current.style.transform = reduced ? "" : `translate3d(0, ${(p - 0.5) * -90}px, 0)`;
     },
     "pass",
   );
-  if (typeof window !== "undefined") reduce.current = prefersReducedMotion();
 
   const align = lang === "ar" ? "text-right" : "text-left";
   const copy = t[chapterKey];
