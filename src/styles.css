@@ -109,6 +109,8 @@
   html {
     background-color: var(--color-background);
     scroll-behavior: smooth;
+    /* The language switch restores the reader's place itself (see DocChrome). */
+    overflow-anchor: none;
   }
   body {
     background-color: var(--color-background);
