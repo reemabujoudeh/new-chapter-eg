@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, type CSSProperties } from "react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 import { cn } from "@/lib/utils";
 import deskImg from "@/assets/ch2-desk-scene.webp";
@@ -32,7 +32,7 @@ export function ChapterProblem() {
       innerClassName="pb-10 md:pb-16"
       after={
         <div ref={trackRef} className="relative h-[300svh]">
-          <div ref={sceneRef} className="sticky top-0 h-svh overflow-hidden" style={{ "--p": "0" } as React.CSSProperties}>
+          <div ref={sceneRef} className="sticky top-0 h-svh overflow-hidden" style={{ "--p": "0" } as CSSProperties}>
             <img
               src={deskImg}
               alt={t.problem.sceneAlt}
